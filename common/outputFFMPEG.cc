@@ -392,9 +392,9 @@ OutputFFMPEG::addFrame ( void* frame,
       // This is just a hack to make the error "Application provided invalid,
       // non monotonically increasing dts to muxer" go away.  I should fix it
       // properly somehow
-      packet->dts = videoStream->cur_dts;
-      packet->dts++;
-      packet->pts = packet->dts;
+      //packet->dts = videoStream->cur_dts;
+      //packet->dts++;
+      //packet->pts = packet->dts;
       ret = av_write_frame ( formatContext, packet );
       av_packet_unref ( packet );
     }

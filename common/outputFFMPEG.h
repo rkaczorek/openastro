@@ -58,7 +58,7 @@ class OutputFFMPEG : public OutputHandler
     void		closeVideo ( void );
     AVFrame*		allocatePicture ( enum AVPixelFormat, int, int );
 
-    AVOutputFormat*	outputFormat;
+    const AVOutputFormat*	outputFormat;
     AVFormatContext*	formatContext;
     AVCodecContext*	codecContext;
     AVStream*		videoStream;
